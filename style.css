@@ -1,0 +1,49 @@
+:root {
+  /* Tons escuros */
+  --preto-fosco: #1a1a1a; /* Preto fosco */
+  --grafite: #2f2f2f; /* Grafite, tom médio escuro */
+  --prata-metalico: #b0b0b0; /* Prata metálico claro */
+
+  /* Cores de destaque */
+  --vermelho-potente: #d32f2f; /* Vermelho forte para potência */
+  --azul-eletrico: #2979ff; /* Azul elétrico para esportividade */
+
+  /* Cores de fundo e efeitos */
+  --fundo-escuro: var(--preto-fosco);
+  --elemento-metalico: linear-gradient(
+    135deg,
+    #b0b0b0,
+    #8c8c8c
+  ); /* efeito metálico */
+}
+
+header {
+  width: 100%;
+  height: 300px; /* altura mais realista para um header */
+  border: 2px solid var(--preto-fosco);
+  background: var(--elemento-metalico);
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  border: 3px solid var(--azul-eletrico);
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--grafite);
+}
+
+.Link_Nav {
+  text-decoration: none;
+  color: var(--prata-metalico);
+}
+
+li {
+  display: inline-block;
+  list-style: none;
+  margin: 20px;
+  font-size: 20px;
+  color: var(--prata-metalico);
+}
