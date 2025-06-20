@@ -50,7 +50,9 @@ nav {
 .Drop_Down {
   position: relative;
   display: inline-block;
+  margin: 0 15px;
 }
+
 
 .Drop_Button {
   background-color: var(--grafite-metalico);
@@ -58,6 +60,16 @@ nav {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.Drop_Button.active {
+  background-color: var(--preto-fosco);
+  color: var(--grafite-metalico);
+  font-weight: bold;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px var(--preto-fosco);
 }
 
 .Drop_Content {
@@ -68,7 +80,7 @@ nav {
   position: absolute;
   background-color: var(--grafite);
   top: 100%;
-  left: 0;
+  left: -30%;
   border-radius: 4px;
   min-width: 160px;
   box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.2);
@@ -79,6 +91,7 @@ nav {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 0 10px var(--preto-fosco);
 }
 
 .DropdownContainer a {
@@ -90,8 +103,12 @@ nav {
   font-weight: bold;
 }
 
+
+
 .DropdownContainer a:hover {
   background-color: var(--grafite-metalico);
+  color: var(--azul-eletrico);
+  transition: color 0.3s ease;
 }
 
 .Logo_UDM {
