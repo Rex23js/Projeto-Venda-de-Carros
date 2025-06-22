@@ -1,92 +1,147 @@
+/* =====================================================
+                   VARIÁVEIS GLOBAIS
+===================================================== */
+
 :root {
-  /* Tons escuros */
+  /* Tons escuros - Estoque base */
   --preto-fosco: #1a1a1a;
-  /* Preto fosco */
   --grafite: #2f2f2f;
-  /* Grafite, tom médio escuro */
   --prata-metalico: #b0b0b0;
-  /* Prata metálico claro */
   --grafite-metalico: #4b4b4b;
 
   /* Cores de destaque */
   --vermelho-potente: #d32f2f;
-  /* Vermelho forte para potência */
   --azul-eletrico: #2979ff;
-  /* Azul elétrico para esportividade */
 
   /* Cores de fundo e efeitos */
   --fundo-escuro: var(--preto-fosco);
-  --elemento-metalico: linear-gradient(135deg,
-      #b0b0b0,
-      #8c8c8c);
-  /* efeito metálico */
+  --elemento-metalico: linear-gradient(135deg, #b0b0b0, #8c8c8c);
+
+  /* Layout - Tema Escuro padrão */
+  --cor-fundo-body: var(--preto-fosco);
+  --cor-texto-body: white;
+  --cor-fundo-nav: var(--grafite);
+  --cor-texto-nav: var(--prata-metalico);
+  --cor-borda-nav: var(--grafite-metalico);
+  --cor-fundo-dropbutton: var(--grafite-metalico);
+  --cor-texto-dropbutton: var(--prata-metalico);
+  --cor-fundo-card: #222;
+  --cor-borda-card: white;
+  --cor-fundo-dropdown: var(--grafite);
+  --cor-texto-dropdown-link: var(--prata-metalico);
 }
+
+/* =====================================================
+                      LAYOUT BASE
+===================================================== */
 
 body {
+  /* Reset */
   margin: 0;
-  background-color: var(--preto-fosco);
+
+  /* Layout / Aparência */
+  background-color: var(--cor-fundo-body);
+  color: var(--cor-texto-body);
 }
+
+
+
+
+/* =====================================================
+               NAVEGAÇÃO - HEADER /NAVBAR
+===================================================== */
 
 header {
-  width: 100%;
-  height: 300px;
-  border: 2px solid var(--preto-fosco);
-}
-
-nav {
-  width: 100%;
+  /* Layout */
+  transition: all 0.3s ease;
   height: 100px;
-  border: 3px solid #4b4b4b;
-  text-align: center;
+  display: block;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
-  background-color: var(--grafite);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: var(--cor-fundo-nav);
 }
 
-/* Dropdowns */
+header.Scroll_Shadow {
+  box-shadow: 0px 13px 10px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.3s ease;
+}
 
+nav {
+  /* Layout */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  height: 100px;
+  padding: 0 20px;
+  text-align: center;
+
+  /* Aparência */
+  background-color: var(--cor-fundo-nav);
+  color: var(--cor-texto-nav);
+  border: 3px solid var(--cor-borda-nav);
+  border-bottom: 1px solid var(--cor-borda-nav);
+}
+
+/* =====================================================
+                       DROPDOWN
+===================================================== */
+
+/* Container do Dropdown */
 .Drop_Down {
   position: relative;
   display: inline-block;
   margin: 0 15px;
 }
 
-
+/* Botão principal do Dropdown */
 .Drop_Button {
-  background-color: var(--grafite-metalico);
-  color: var(--prata-metalico);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: var(--cor-fundo-dropbutton);
+  color: var(--cor-texto-dropbutton);
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  cursor: pointer;
+  font-weight: bold;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: all 0.3s ease;
 }
 
+/* Efeito hover do botão */
+.Drop_Button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  background-color: var(--grafite-metalico);
+  color: var(--prata-metalico);
+}
+
+/* Estado ativo do botão */
 .Drop_Button.active {
   background-color: var(--preto-fosco);
   color: var(--grafite-metalico);
-  font-weight: bold;
   transform: scale(1.05);
   box-shadow: 0 0 8px var(--preto-fosco);
 }
 
+/* Conteúdo interno do Dropdown (oculto por padrão) */
 .Drop_Content {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, visibility 0.3s ease;
   position: absolute;
-  background-color: var(--grafite);
   top: 100%;
   left: -30%;
-  border-radius: 4px;
   min-width: 160px;
-  box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-color: var(--grafite);
+  box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   z-index: 1;
 }
 
+/* Estado visível do Dropdown */
 .Drop_Content.show {
   opacity: 1;
   visibility: visible;
@@ -94,22 +149,85 @@ nav {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 0 10px var(--preto-fosco);
 }
 
+/* Links dentro do Dropdown */
 .DropdownContainer a {
-  color: var(--grafite);
-  padding: 12px 16px;
-  text-decoration: none;
   display: block;
+  padding: 12px 16px;
   color: var(--prata-metalico);
+  text-decoration: none;
   font-weight: bold;
 }
 
-
-
 .DropdownContainer a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
   background-color: var(--grafite-metalico);
-  color: var(--azul-eletrico);
+  color: var(--preto-fosco);
   transition: color 0.3s ease;
 }
+
+/* =====================================================
+                 AÇÕES DE NAVEGAÇÃO
+===================================================== */
+
+.Nav_Actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Nav_Actions button {
+  padding: 8px 12px;
+  border: none;
+  background-color: var(--cor-fundo-dropbutton);
+  color: var(--cor-texto-dropbutton);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.Nav_Actions button:hover {
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  background-color: var(--grafite-metalico);
+  color: var(--prata-metalico);
+}
+
+/* =====================================================
+                    INPUT DE BUSCA
+===================================================== */
+
+.Input_Busca {
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--cor-borda-nav);
+  background-color: var(--grafite-metalico);
+  color: var(--prata-metalico);
+  transition: all 0.3s ease;
+}
+
+.Input_Busca::placeholder {
+  color: var(--prata-metalico);
+  opacity: 0.7;
+}
+
+.Input_Busca:focus {
+  outline: none;
+  border-color: var(--azul-eletrico);
+  box-shadow: 0 0 8px var(--azul-eletrico);
+}
+
+body.Tema_Escuro .Input_Busca {
+  background-color: var(--grafite);
+  color: white;
+  border: 1px solid var(--prata-metalico);
+}
+
+/* =====================================================
+                        BANNER
+===================================================== */
 
 .Logo_UDM {
   width: 100px;
@@ -124,25 +242,27 @@ nav {
   display: block;
 }
 
-
-/* Cards */
+/* =====================================================
+                   CARDS DE CARROS
+===================================================== */
 
 .Cards_Content {
   display: flex;
+  margin: 0 auto;
   flex-wrap: wrap;
+  max-width: 1360px;
   justify-content: center;
   gap: 100px 40px;
-  max-width: 1360px;
-  margin: 0 auto;
 }
 
 .Cards {
+  display: flex;
   width: 300px;
   height: 400px;
-  border: 2px solid #fff;
-  display: flex;
   flex-direction: column;
   flex: 0 0 300px;
+  border: 2px solid var(--cor-borda-card);
+  background-color: var(--cor-fundo-card);
 }
 
 .Cards img {
@@ -156,4 +276,48 @@ nav {
   height: 30%;
   border: 3px solid var(--azul-eletrico);
   box-sizing: border-box;
+}
+
+/* =====================================================
+                      FOOTER
+===================================================== */
+
+.Site_Footer {
+  text-align: center;
+  box-sizing: border-box;
+  height: 100px;
+  padding: 30px;
+  background-color: var(--grafite);
+  color: var(--prata-metalico);
+  font-size: 14px;
+  border-top: 2px solid var(--grafite-metalico);
+}
+
+/* =====================================================
+                         TEMAS
+===================================================== */
+
+body.Tema_Escuro {
+  --cor-fundo-body: var(--preto-fosco);
+  --cor-texto-body: white;
+
+  --cor-fundo-nav: var(--grafite);
+  --cor-texto-nav: var(--prata-metalico);
+  --cor-borda-nav: var(--grafite-metalico);
+  --cor-fundo-dropbutton: var(--grafite-metalico);
+  --cor-texto-dropbutton: var(--prata-metalico);
+}
+
+body.Tema_Claro {
+  --cor-fundo-body: white;
+  --cor-texto-body: black;
+
+  --cor-fundo-nav: #f0f0f0;
+  --cor-texto-nav: black;
+  --cor-borda-nav: #cccccc;
+  --cor-fundo-dropbutton: #dddddd;
+  --cor-texto-dropbutton: black;
+
+  --cor-fundo-card: #f9f9f9;
+  --cor-borda-card: #333;
 }
