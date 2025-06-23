@@ -1,23 +1,17 @@
 /* =====================================================
                    VARIÁVEIS GLOBAIS
 ===================================================== */
-
 :root {
-  /* Tons escuros - Estoque base */
   --preto-fosco: #1a1a1a;
   --grafite: #2f2f2f;
   --prata-metalico: #b0b0b0;
   --grafite-metalico: #4b4b4b;
-
-  /* Cores de destaque */
   --vermelho-potente: #d32f2f;
   --azul-eletrico: #2979ff;
 
-  /* Cores de fundo e efeitos */
   --fundo-escuro: var(--preto-fosco);
   --elemento-metalico: linear-gradient(135deg, #b0b0b0, #8c8c8c);
 
-  /* Layout - Tema Escuro padrão */
   --cor-fundo-body: var(--preto-fosco);
   --cor-texto-body: white;
   --cor-fundo-nav: var(--grafite);
@@ -34,69 +28,49 @@
 /* =====================================================
                       LAYOUT BASE
 ===================================================== */
-
 body {
-  /* Reset */
   margin: 0;
-
-  /* Layout / Aparência */
   background-color: var(--cor-fundo-body);
   color: var(--cor-texto-body);
 }
 
-
-
-
 /* =====================================================
-               NAVEGAÇÃO - HEADER /NAVBAR
+               NAVEGAÇÃO - HEADER / NAVBAR
 ===================================================== */
-
 header {
-  /* Layout */
-  transition: all 0.3s ease;
-  height: 100px;
-  display: block;
-  width: 100%;
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: var(--cor-fundo-nav);
+  height: 100px;
 }
 
 header.Scroll_Shadow {
-  box-shadow: 0px 13px 10px rgba(0, 0, 0, 0.3);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
 }
 
 nav {
-  /* Layout */
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 1000;
   height: 100px;
   padding: 0 20px;
   text-align: center;
-
-  /* Aparência */
   background-color: var(--cor-fundo-nav);
   color: var(--cor-texto-nav);
-  border: 3px solid var(--cor-borda-nav);
   border-bottom: 1px solid var(--cor-borda-nav);
 }
 
 /* =====================================================
                        DROPDOWN
 ===================================================== */
-
-/* Container do Dropdown */
 .Drop_Down {
   position: relative;
   display: inline-block;
   margin: 0 15px;
 }
 
-/* Botão principal do Dropdown */
 .Drop_Button {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   background-color: var(--cor-fundo-dropbutton);
@@ -105,11 +79,9 @@ nav {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.3s ease;
   transition: all 0.3s ease;
 }
 
-/* Efeito hover do botão */
 .Drop_Button:hover {
   transform: scale(1.2);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
@@ -117,7 +89,6 @@ nav {
   color: var(--prata-metalico);
 }
 
-/* Estado ativo do botão */
 .Drop_Button.active {
   background-color: var(--preto-fosco);
   color: var(--grafite-metalico);
@@ -125,7 +96,6 @@ nav {
   box-shadow: 0 0 8px var(--preto-fosco);
 }
 
-/* Conteúdo interno do Dropdown (oculto por padrão) */
 .Drop_Content {
   opacity: 0;
   visibility: hidden;
@@ -141,7 +111,6 @@ nav {
   z-index: 1;
 }
 
-/* Estado visível do Dropdown */
 .Drop_Content.show {
   opacity: 1;
   visibility: visible;
@@ -149,7 +118,6 @@ nav {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 0 10px var(--preto-fosco);
 }
 
-/* Links dentro do Dropdown */
 .DropdownContainer a {
   display: block;
   padding: 12px 16px;
@@ -161,16 +129,13 @@ nav {
 .DropdownContainer a:hover {
   transform: scale(1.1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
   background-color: var(--grafite-metalico);
   color: var(--preto-fosco);
-  transition: color 0.3s ease;
 }
 
 /* =====================================================
                  AÇÕES DE NAVEGAÇÃO
 ===================================================== */
-
 .Nav_Actions {
   display: flex;
   align-items: center;
@@ -184,13 +149,12 @@ nav {
   color: var(--cor-texto-dropbutton);
   cursor: pointer;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .Nav_Actions button:hover {
   transform: scale(1.2);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.3s ease;
   background-color: var(--grafite-metalico);
   color: var(--prata-metalico);
 }
@@ -198,7 +162,6 @@ nav {
 /* =====================================================
                     INPUT DE BUSCA
 ===================================================== */
-
 .Input_Busca {
   padding: 8px 12px;
   border-radius: 20px;
@@ -219,16 +182,9 @@ nav {
   box-shadow: 0 0 8px var(--azul-eletrico);
 }
 
-body.Tema_Escuro .Input_Busca {
-  background-color: var(--grafite);
-  color: white;
-  border: 1px solid var(--prata-metalico);
-}
-
 /* =====================================================
                         BANNER
 ===================================================== */
-
 .Logo_UDM {
   width: 100px;
   height: 100px;
@@ -245,7 +201,6 @@ body.Tema_Escuro .Input_Busca {
 /* =====================================================
                    CARDS DE CARROS
 ===================================================== */
-
 .Cards_Content {
   display: flex;
   margin: 0 auto;
@@ -263,44 +218,205 @@ body.Tema_Escuro .Input_Busca {
   flex: 0 0 300px;
   border: 2px solid var(--cor-borda-card);
   background-color: var(--cor-fundo-card);
+  transition: transform 0.3s ease;
 }
 
 .Cards img {
   width: 100%;
-  height: 70%;
+  height: 60%;
   object-fit: cover;
+}
+
+.Cards:hover {
+  transform: scale(1.05);
 }
 
 .UnderCard {
   width: 100%;
-  height: 30%;
-  border: 3px solid var(--azul-eletrico);
+  height: 40%;
+  border-top: 3px solid;
   box-sizing: border-box;
+  text-align: center;
+}
+
+.UnderCard p {
+  font-size: 0.8em;
+  margin: 2px 0;
+  line-height: 1.2em;
+}
+.UnderCard h3 {
+  font-size: 1em;
+  margin-bottom: 4px;
+}
+
+.Card_Button {
+  padding: 8px 12px;
+  border: none;
+  background-color: var(--azul-eletrico);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.Card_Button:hover {
+  background-color: var(--vermelho-potente);
+  transform: scale(1.05);
+}
+
+.Site_Footer {
+  background-color: var(--cor-fundo-nav);
+  color: var(--cor-texto-nav);
+  text-align: center;
+  padding: 20px;
 }
 
 /* =====================================================
-                      FOOTER
+                        MODAL
 ===================================================== */
 
-.Site_Footer {
+/* Overlay escuro que bloqueia o fundo */
+#FormularioCompra {
+  position: fixed; /* fixa na tela */
+  top: 0;
+  left: 0;
+  width: 100vw; /* largura total da viewport */
+  height: 100vh; /* altura total da viewport */
+  background-color: rgba(0, 0, 0, 0.6); /* sombra preta semi-transparente */
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  align-items: center; /* centraliza verticalmente */
+  z-index: 2000; /* acima de tudo */
+  transition: opacity 0.3s ease;
+}
+
+/* Esconde o modal */
+#FormularioCompra.hidden {
+  opacity: 0;
+  pointer-events: none; /* não permite interação quando oculto */
+}
+
+/* Caixa branca central */
+#FormularioCompra > form {
+  background-color: var(--cor-fundo-card);
+  color: var(--cor-texto-body);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 450px;
+  max-height: 90vh;
+  overflow-y: auto; /* scroll interno se precisar */
+  position: relative;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Título do formulário */
+#FormularioCompra > form h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: var(--azul-eletrico);
   text-align: center;
-  box-sizing: border-box;
-  height: 100px;
-  padding: 30px;
-  background-color: var(--grafite);
+}
+
+/* Inputs e textarea */
+#FormularioCompra input[type="text"],
+#FormularioCompra input[type="email"],
+#FormularioCompra input[type="tel"],
+#FormularioCompra select,
+#FormularioCompra textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1.5px solid var(--grafite-metalico);
+  border-radius: 8px;
+  background-color: #333;
+  color: white;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+#FormularioCompra input[type="text"]:focus,
+#FormularioCompra input[type="email"]:focus,
+#FormularioCompra input[type="tel"]:focus,
+#FormularioCompra select:focus,
+#FormularioCompra textarea:focus {
+  border-color: var(--azul-eletrico);
+  outline: none;
+  box-shadow: 0 0 8px var(--azul-eletrico);
+}
+
+/* Botão enviar */
+#FormularioCompra button[type="submit"] {
+  background-color: var(--azul-eletrico);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#FormularioCompra button[type="submit"]:hover {
+  background-color: var(--vermelho-potente);
+  transform: scale(1.05);
+}
+
+/* Botão fechar (canto superior direito) */
+#FormularioCompra .fechar-modal {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--cor-texto-body);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#FormularioCompra .fechar-modal:hover {
+  color: var(--vermelho-potente);
+}
+
+.Busca_Container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.Input_Busca {
+  padding: 10px 15px;
+  width: 300px;
+  border-radius: 25px;
+  border: 2px solid var(--azul-eletrico);
+  background-color: var(--grafite-metalico);
   color: var(--prata-metalico);
-  font-size: 14px;
-  border-top: 2px solid var(--grafite-metalico);
+  font-size: 1em;
+}
+
+.Input_Busca::placeholder {
+  color: var(--prata-metalico);
+  opacity: 0.7;
+}
+
+#semResultados {
+  color: var(--vermelho-potente);
+  font-weight: bold;
+  margin-top: 10px;
 }
 
 /* =====================================================
                          TEMAS
 ===================================================== */
-
 body.Tema_Escuro {
   --cor-fundo-body: var(--preto-fosco);
   --cor-texto-body: white;
-
   --cor-fundo-nav: var(--grafite);
   --cor-texto-nav: var(--prata-metalico);
   --cor-borda-nav: var(--grafite-metalico);
@@ -311,13 +427,42 @@ body.Tema_Escuro {
 body.Tema_Claro {
   --cor-fundo-body: white;
   --cor-texto-body: black;
-
   --cor-fundo-nav: #f0f0f0;
   --cor-texto-nav: black;
   --cor-borda-nav: #cccccc;
   --cor-fundo-dropbutton: #dddddd;
   --cor-texto-dropbutton: black;
-
   --cor-fundo-card: #f9f9f9;
   --cor-borda-card: #333;
+}
+
+/* =====================================================
+                 MODO DE ACESSIBILIDADE
+===================================================== */
+body.Modo_Acessibilidade {
+  font-size: 1.2em;
+  background-color: black;
+  color: white;
+}
+
+body.Modo_Acessibilidade nav,
+body.Modo_Acessibilidade .Drop_Content,
+body.Modo_Acessibilidade .Cards,
+body.Modo_Acessibilidade footer {
+  background-color: #111;
+  color: white;
+}
+
+body.Modo_Acessibilidade .Drop_Button,
+body.Modo_Acessibilidade .Nav_Actions button {
+  background-color: #000;
+  color: yellow;
+  font-weight: bold;
+  border: 2px solid yellow;
+  font-size: 1.1em;
+}
+
+body.Modo_Acessibilidade a {
+  color: yellow;
+  text-decoration: underline;
 }

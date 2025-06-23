@@ -1,171 +1,244 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>UDM</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>UDM</title>
-</head>
+  <body>
+    <!-- ======= Header Principal ======= -->
+    <header>
+      <nav>
+        <!-- ======= Logo ======= -->
+        <img src="Logo_Marca_UDM.png" alt="UDM Logo" class="Logo_UDM" />
 
-<body>
+        <!-- ======= Menus Dropdown ======= -->
+        <div class="Content_Drop">
+          <div class="Drop_Down">
+            <button class="Drop_Button">Carros</button>
+            <div class="Drop_Content">
+              <div class="DropdownContainer">
+                <a href="#">SUVs</a>
+                <a href="#">Esportivos</a>
+                <a href="#">Sedans</a>
+                <a href="#">Elétricos</a>
+              </div>
+            </div>
+          </div>
 
-  <!-- ======= Header Principal ======= -->
-  <header>
+          <div class="Drop_Down">
+            <button class="Drop_Button">Comprar</button>
+            <div class="Drop_Content">
+              <div class="DropdownContainer">
+                <a href="#">Ofertas</a>
+                <a href="#">Teste Drive</a>
+                <a href="#">Configurar Veículo</a>
+              </div>
+            </div>
+          </div>
 
+          <div class="Drop_Down">
+            <button class="Drop_Button">Serviços</button>
+            <div class="Drop_Content">
+              <div class="DropdownContainer">
+                <a href="#">Revisão</a>
+                <a href="#">Peças</a>
+                <a href="#">Garantia</a>
+              </div>
+            </div>
+          </div>
 
-    <!-- ======= NavBar ======= -->
-    <nav>
+          <div class="Drop_Down">
+            <button class="Drop_Button">Anunciar</button>
+            <div class="Drop_Content">
+              <div class="DropdownContainer">
+                <a href="#">Anuncie seu carro</a>
+              </div>
+            </div>
+          </div>
 
-
-      <!-- ======= Logo da Marca ======= -->
-      <img src="Logo_Marca_UDM.png" alt="UDM Logo Ultimate Driving Machine" class="Logo_UDM" />
-
-      <!-- ======= Dropdown Menus ======= -->
-      <div class="Content_Drop">
-
-        <!-- ======= DropDown: Carros ======= -->
-        <div class="Drop_Down">
-          <button class="Drop_Button">Carros</button>
-          <div class="Drop_Content">
-            <div class="DropdownContainer">
-              <a href="#">SUVs</a>
-              <a href="#">Esportivos</a>
-              <a href="#">Sedans</a>
-              <a href="#">Eletricos</a>
+          <div class="Drop_Down">
+            <button class="Drop_Button">Empresa</button>
+            <div class="Drop_Content">
+              <div class="DropdownContainer">
+                <a href="#">História</a>
+                <a href="#">Contato</a>
+                <a href="#">Concessionárias</a>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- ======= DropDown: Comprar ======= -->
-        <div class="Drop_Down">
-          <button class="Drop_Button">Comprar</button>
-          <div class="Drop_Content">
-            <div class="DropdownContainer">
-              <a href="#">Ofertas</a>
-              <a href="#">Teste Drive</a>
-              <a href="#">Configurar Veiculo</a>
-            </div>
+        <!-- ======= Ações: Busca, Tema, Acessibilidade ======= -->
+        <div class="Nav_Actions">
+          <input
+            type="text"
+            class="Input_Busca"
+            placeholder="Buscar modelo..."
+          />
+          <button id="Search_Button">Buscar</button>
+          <button id="Tema_Button">Mudar Tema</button>
+          <button id="Acessibilidade_Button">Acessibilidade</button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ======= Banner ======= -->
+      <section class="Banner">
+        <img src="Banner_Carro.png" alt="Banner com imagem de carro UDM" />
+      </section>
+
+      <!-- ======= Cards de Carros ======= -->
+
+      <!-- Card 1 -->
+      <section class="Cards_Content">
+        <div class="Cards">
+          <img src="Teste1.jpg" alt="Audi A5 Sportback" />
+          <div class="UnderCard">
+            <h3>Audi A5 Sportback S line 2024</h3>
+            <p>Ano: 2024</p>
+            <p>Motor: 2.0L Turbo, 204cv, Tração quattro</p>
+            <p>Preço: R$ 395.950</p>
+            <p>Estilo coupé com função sedã e motor híbrido leve.</p>
+            <button class="Card_Button">Comprar</button>
           </div>
         </div>
 
-        <!-- ======= DropDown: Servicos ======= -->
-        <div class="Drop_Down">
-          <button class="Drop_Button">Serviços</button>
-          <div class="Drop_Content">
-            <div class="DropdownContainer">
-              <a href="#">Revisão</a>
-              <a href="#">Peças</a>
-              <a href="#">Garantia</a>
-            </div>
+        <!-- Card 2 -->
+        <div class="Cards">
+          <img src="Teste2.jpg" alt="BMW X1 sDrive20i" />
+          <div class="UnderCard">
+            <h3>BMW X1 sDrive20i M Sport 2024</h3>
+            <p>Ano: 2024</p>
+            <p>Motor: 2.0L Turbo, 204cv</p>
+            <p>Preço: R$ 382.950</p>
+            <p>
+              Bom equilíbrio entre performance e praticidade, ideal para uso
+              urbano.
+            </p>
+            <button class="Card_Button">Comprar</button>
           </div>
         </div>
 
-        <!-- ======= DropDown: Anunciar ======= -->
-        <div class="Drop_Down">
-          <button class="Drop_Button">Anunciar</button>
-          <div class="Drop_Content">
-            <div class="DropdownContainer">
-              <a href="#">Anuncie seu carro</a>
-            </div>
+        <!-- Card 3 -->
+        <div class="Cards">
+          <img src="Teste3.jpg" alt="Audi A5 Sportback" />
+          <div class="UnderCard">
+            <h3>Audi A5 Sportback S line 2024</h3>
+            <p>Ano: 2024</p>
+            <p>Motor: 2.0L Turbo, 204cv, Tração quattro</p>
+            <p>Preço: R$ 395.950</p>
+            <p>Estilo coupé com função sedã e motor híbrido leve.</p>
+            <button class="Card_Button">Comprar</button>
           </div>
         </div>
 
-        <!-- ======= DropDown: Empresa ======= -->
-        <div class="Drop_Down">
-          <button class="Drop_Button">Empresa</button>
-          <div class="Drop_Content">
-            <div class="DropdownContainer">
-              <a href="#">Historia</a>
-              <a href="#">Contato</a>
-              <a href="#">Concessionarias</a>
-            </div>
+        <div class="Cards">
+          <img src="Teste4.jpg" alt="Audi A5 Sportback" />
+          <div class="UnderCard">
+            <h3>Audi A5 Sportback S line 2024</h3>
+            <p>Ano: 2024</p>
+            <p>Motor: 2.0L Turbo, 204cv, Tração quattro</p>
+            <p>Preço: R$ 395.950</p>
+            <p>Estilo coupé com função sedã e motor híbrido leve.</p>
+            <button class="Card_Button">Comprar</button>
           </div>
         </div>
-      </div>
 
-      <!-- ======= Botões de Busca e Tema da NavBar ======= -->
-      <div class="Nav_Actions">
-        <button id="Search_Button">Buscar</button>
-        <button id="Tema_Button">Mudar Tema</button>
-      </div>
+        <div class="Cards">
+          <img src="Teste5.jpg" alt="Audi A5 Sportback" />
+          <div class="UnderCard">
+            <h3>Audi A5 Sportback S line 2024</h3>
+            <p>Ano: 2024</p>
+            <p>Motor: 2.0L Turbo, 204cv, Tração quattro</p>
+            <p>Preço: R$ 395.950</p>
+            <p>Estilo coupé com função sedã e motor híbrido leve.</p>
+            <button class="Card_Button">Comprar</button>
+          </div>
+        </div>
 
-    </nav>
+        <div class="Cards">
+          <img src="Teste6.jpg" alt="Audi A5 Sportback" />
+          <div class="UnderCard">
+            <h3>Audi A5 Sportback S line 2024</h3>
+            <p>Ano: 2024</p>
+            <p>Motor: 2.0L Turbo, 204cv, Tração quattro</p>
+            <p>Preço: R$ 395.950</p>
+            <p>Estilo coupé com função sedã e motor híbrido leve.</p>
+            <button class="Card_Button">Comprar</button>
+          </div>
+        </div>
 
-  </header>
+        <div class="Cards">
+          <img src="Teste7.jpg" alt="Audi A5 Sportback" />
+          <div class="UnderCard">
+            <h3>Audi A5 Sportback S line 2024</h3>
+            <p>Ano: 2024</p>
+            <p>Motor: 2.0L Turbo, 204cv, Tração quattro</p>
+            <p>Preço: R$ 395.950</p>
+            <p>Estilo coupé com função sedã e motor híbrido leve.</p>
+            <button class="Card_Button">Comprar</button>
+          </div>
+        </div>
 
+        <div class="Cards">
+          <img src="Teste8.jpg" alt="Audi A5 Sportback" />
+          <div class="UnderCard">
+            <h3>Audi A5 Sportback S line 2024</h3>
+            <p>Ano: 2024</p>
+            <p>Motor: 2.0L Turbo, 204cv, Tração quattro</p>
+            <p>Preço: R$ 395.950</p>
+            <p>Estilo coupé com função sedã e motor híbrido leve.</p>
+            <button class="Card_Button">Comprar</button>
+          </div>
+        </div>
+      </section>
+    </main>
 
-  <!-- ======= Conteúdo Principal ======= -->
-  <main>
+    <!-- ======= Formulário de Compra ======= -->
+    <div id="FormularioCompra" class="hidden">
+      <form>
+        <button
+          type="button"
+          class="fechar-modal"
+          aria-label="Fechar formulário"
+        >
+          &times;
+        </button>
+        <h2>Comprar Carro</h2>
+        <input
+          type="text"
+          id="carroSelecionado"
+          name="carroSelecionado"
+          readonly
+        />
+        <input type="text" name="nome" placeholder="Seu Nome" required />
+        <input type="email" name="email" placeholder="Seu Email" required />
+        <input type="tel" name="telefone" placeholder="Telefone" required />
+        <select name="opcaoPagamento" required>
+          <option value="">Selecione o método de pagamento</option>
+          <option value="financiamento">Financiamento</option>
+          <option value="avista">À vista</option>
+          <option value="leasing">Leasing</option>
+        </select>
+        <button type="submit">Enviar Pedido</button>
+      </form>
+    </div>
 
-    <!-- ======= Banner ======= -->
-    <section class="Banner">
-      <img src="Banner_Carro.png" alt="Banner com imagem de carro UDM" />
-
+    <section class="Busca_Container">
+      <input type="text" class="Input_Busca" placeholder="Buscar modelo..." />
+      <p id="semResultados" hidden>Sem resultados para sua busca.</p>
     </section>
 
-    <!-- ======= Cards de Carros ======= -->
-    <section class="Cards_Content">
+    <!-- ======= Footer ======= -->
+    <footer class="Site_Footer">
+      <p>&copy; 2025 Ultimate Driving Machine. Todos os direitos reservados.</p>
+    </footer>
 
-      <!-- ======= Card 1 ======= -->
-      <div class="Cards">
-        <img src="Teste1.jpg" alt="" />
-        <div class="UnderCard"></div>
-      </div>
-
-      <!-- ======= Card 2 ======= -->
-      <div class="Cards">
-        <img src="Teste2.jpg" alt="" />
-        <div class="UnderCard"></div>
-      </div>
-
-      <!-- ======= Card 3 ======= -->
-      <div class="Cards">
-        <img src="Teste3.jpg" alt="" />
-        <div class="UnderCard"></div>
-      </div>
-
-      <!-- ======= Card 4 ======= -->
-      <div class="Cards">
-        <img src="Teste4.jpg" alt="" />
-        <div class="UnderCard"></div>
-      </div>
-
-      <!-- ======= Card 5 ======= -->
-      <div class="Cards">
-        <img src="Teste5.jpg" alt="" />
-        <div class="UnderCard"></div>
-      </div>
-
-      <!-- ======= Card 6 ======= -->
-      <div class="Cards">
-        <img src="Teste6.jpg" alt="" />
-        <div class="UnderCard"></div>
-      </div>
-
-      <!-- ======= Card 7 ======= -->
-      <div class="Cards">
-        <img src="Teste7.jpg" alt="" />
-        <div class="UnderCard"></div>
-      </div>
-
-      <!-- ======= Card 8 ======= -->
-      <div class="Cards">
-        <img src="Teste8.jpg" alt="" />
-        <div class="UnderCard"></div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="Site_Footer">
-    <p>&copy; 2025 Ultimate Driving Machine. Todos os direitos reservados.</p>
-  </footer>
-
-
-  <!-- ======= Script JS ======= -->
-  <script src="script.js"></script>
-
-</body>
-
+    <!-- ======= Scripts ======= -->
+    <script src="script.js"></script>
+  </body>
 </html>
